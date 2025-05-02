@@ -1,7 +1,8 @@
-FROM almalinux:8
+ARG version
+FROM almalinux:${version}
 ARG username
-RUN adduser $username
-USER $username
+RUN adduser $ username
+USER $ username
 ARG COURSE
 ARG TRAINER
 RUN echo "course : $ {COURSE},Trainer : ${TRAINER}"
